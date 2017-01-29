@@ -11,7 +11,7 @@ function Record(api_url, time, lennox_url, lennox_auth)
 
     // CREATE A NEW JSON FOR THE API_CALLBACK TO IOT DATABASE
     var json_post = {};
-    json_post.Device_ID = 'Lennox'
+    json_post.Device_id = 'Lennox'
     json_post.Time = time;
     json_post.Away_Mode = json_get.tStatInfo[0].Away_Mode;
     json_post.ConnectionStatus = json_get.tStatInfo[0].ConnectionStatus;
