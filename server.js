@@ -14,6 +14,9 @@ var lennox_url = 'https://services.myicomfort.com/DBAcessService.svc/GetTStatInf
 var lennox = require('./lennox.js');
 var photon = require('./photon.js');
 var token = process.env['TOKEN'];
+var accuweather = require('./accuweather.js');
+var accuweather_milford_url = "http://apidev.accuweather.com/currentconditions/v1/2290563.json?language=en&apikey=hoArfRosT1215"
+
 
 setInterval(function() {
 
@@ -27,5 +30,7 @@ setInterval(function() {
   var device_id = process.env['DEVICE2_ID'],
       device_var = process.env['DEVICE2_VAR1'];
       photon.record(api_url, time, device_id, device_var, token);
-      
+
+  accuweather.record(api_url, time, accuweather_milford_url);
+
 }, polling_freq);
