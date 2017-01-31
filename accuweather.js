@@ -16,7 +16,9 @@ function Record(api_url, time, accuweather_milford_url)
     json_post.Time = time;
     json_post.WeatherText = json_get[0].WeatherText;
     json_post.Temperature = json_get[0].Temperature.Metric.Value;
-    
+    json_post.WeatherIcon = json_get[0].WeatherIcon;
+    json_post.IsDayTime = json_get[0].IsDayTime;
+
     console.log(json_post);
     request.post(api_url).form(json_post);
 
