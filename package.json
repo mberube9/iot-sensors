@@ -4,7 +4,8 @@
   "description": "Pull IoT data from sensors",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
